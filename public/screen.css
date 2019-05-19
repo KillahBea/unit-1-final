@@ -14,19 +14,25 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: rgb(74, 50, 162);
   color: white;
+  padding: 0 30px;
+}
+.astro-lounge {
+  margin: 0;
 }
 .header-links {
   display: flex;
   flex-direction: row;
-  margin: 30px 40px 0px 0px;
   list-style-type: none;
   color: white;
+  margin: 0;
+  height: 100%;
 }
 
 .header-links li {
-  padding: 10px;
+  padding: 20px 10px;
 }
 
 .header-links li:hover {
@@ -46,10 +52,20 @@ header {
   width: 100%;
   object-fit: cover;
 }
+.image-info {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.image-info p {
+  margin: 0 10px;
+}
 
 .upcoming {
   background-color: rgb(247, 194, 68);
-  height: 2rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
 }
 .launches {
   display: flex;
@@ -61,12 +77,28 @@ header {
   border-bottom-right-radius: 35%;
   height: 2.2rem;
   width: 3rem;
-  margin-top: 15%;
+  margin-top: 10%;
+}
+.arrows {
+  font-size: 30px;
 }
 .launch-info {
   background-color: rgb(237, 237, 237);
   height: 15rem;
   width: 30rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+}
+.mission-info {
+  display: flex;
+  justify-content: center;
+}
+.countdown {
+  border-top: solid #919191 1px;
+  border-bottom: solid #919191 1px;
+  padding: 10px 0;
 }
 
 .right {
@@ -75,7 +107,7 @@ header {
   border-bottom-left-radius: 35%;
   height: 2.2rem;
   width: 3rem;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 .lavender {
   background-color: rgb(206, 197, 230);

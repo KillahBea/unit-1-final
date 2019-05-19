@@ -21,7 +21,7 @@
   </head>
   <body>
     <header>
-      <p>SDG Astro Lounge</p>
+      <p class="astro-lounge">SDG Astro Lounge</p>
       <ul class="header-links">
         <li>
           <a href="https://cloudappreciationsociety.org/">About Us</a>
@@ -32,19 +32,39 @@
       </ul>
     </header>
     <div>
-      <div class="image">
-        <img
-          class="image-of-the-day"
-          src="https://apod.nasa.gov/apod/image/1905/circumhorizontalarc_sladoje_2304.jpg"
-          alt=""
-        />
+      <div class="image"></div>
+      <div class="image-info">
+        <p class="copyright"></p>
+        <p class="separator">|</p>
+        <p class="title"></p>
       </div>
-      <p class="upcoming">Upcoming SpaceX Launches</p>
     </div>
+    <p class="upcoming">Upcoming SpaceX Launches</p>
     <div class="launches">
-      <button class="left"><i class="fas fa-angle-left"></i></button>
-      <p class="launch-info">launch info</p>
-      <button class="right"><i class="fas fa-angle-right"></i></button>
+      <button class="left"><i class="fas fa-angle-left arrows"></i></button>
+      <div class="launch-info">
+        <div class="grouping">
+          <i class="fas fa-space-shuttle"></i>
+          <p class="mission-info"></p>
+        </div>
+        <div class="grouping">
+          <i class="fas fa-info-circle"></i>
+          <p class="flight-info">
+            Repudiandae nesciunt vero quibusdam sapiente, possimus sequi minima doloribus facilis
+            itaque temporibus aut excepturi corporis quaerat optio natus. Quasi, dicta dolorem?
+            Voluptas?
+          </p>
+        </div>
+        <div class="grouping">
+          <i class="fas fa-clock"></i>
+          <p class="countdown">Countdown</p>
+        </div>
+        <div class="grouping">
+          <i class="fas fa-map-marked-alt"></i>
+          <p class="launch-location">Launch location</p>
+        </div>
+      </div>
+      <button class="right"><i class="fas fa-angle-right arrows"></i></button>
     </div>
     <div class="lavender">
       <p>Our Mission Statement.</p>
