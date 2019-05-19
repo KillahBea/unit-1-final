@@ -1,7 +1,15 @@
+const getPictureOfTheDay = () => {
+  fetch(`https://sdg-astro-api.herokuapp.com/api/Nasa/apod`)
+    .then(response => {
+      return response.json()
+    })
+    .then(data => {
+      console.log(data.hdUrl)
+    })
+}
+
 const main = () => {
-  if (document.querySelector('h1.hello-world')) {
-    document.querySelector('h1.hello-world').textContent = 'Hello, World!'
-  }
+  getPictureOfTheDay()
 }
 
 document.addEventListener('DOMContentLoaded', main)
