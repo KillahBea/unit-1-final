@@ -14,24 +14,45 @@ const getPictureOfTheDay = () => {
       document.querySelector('.title').textContent = `title: ${data.title}`
     })
 }
+
+let index = 0
 const getLaunchInfo = () => {
   fetch('https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming')
     .then(response => {
       return response.json()
     })
     .then(data => {
-      console.log(data[0].mission_name)
-      document.querySelector('.mission-info').textContent = data[0].mission_name
-      document.querySelector('.flight-info').textContent = data[0].details
-      document.querySelector('.countdown').textContent = data[0].launch_date_utc
-      document.querySelector('.launch-location').textContent = data[0].launch_site.site_name_long
+      console.log(data[index].mission_name)
+      document.querySelector('.mission-info').textContent = data[index].mission_name
+      document.querySelector('.flight-info').textContent = data[index].details
+      document.querySelector('.countdown').textContent = data[index].launch_date_utc
+      document.querySelector('.launch-location').textContent =
+        data[index].launch_site.site_name_long
     })
 }
-const next = () => {}
+const nextSlide = () => {
+  index++
+  if (index > 23) {
+    index = 0
+    getLaunchInfo()
+  } else {
+    getLaunchInfo()
+  }
+}
+const previousSlide = () => {
+  index--
+  if (index < 0) {
+    index = 23
+    getLaunchInfo()
+  } else {
+    getLaunchInfo()
+  }
+}
 
 const main = () => {
   getPictureOfTheDay()
   getLaunchInfo()
 }
-
+document.querySelector('.right').addEventListener('click', nextSlide)
+document.querySelector('.left').addEventListener('click', previousSlide)
 document.addEventListener('DOMContentLoaded', main)
