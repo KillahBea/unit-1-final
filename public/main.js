@@ -22,8 +22,12 @@ const getLaunchInfo = () => {
     .then(data => {
       console.log(data[0].mission_name)
       document.querySelector('.mission-info').textContent = data[0].mission_name
+      document.querySelector('.flight-info').textContent = data[0].details
+      document.querySelector('.countdown').textContent = data[0].launch_date_utc
+      document.querySelector('.launch-location').textContent = data[0].launch_site.site_name_long
     })
 }
+const next = () => {}
 
 const main = () => {
   getPictureOfTheDay()
